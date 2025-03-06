@@ -1,98 +1,79 @@
 import * as React from "react"
 import Hero from "../components/Hero"
 import Contact from "../components/Contact"
+import Services from "../components/Services"
 import Seo from "../components/Seo"
 
 const IndexPage: React.FC = () => {
+  const services = [
+    {
+      title: "Decks & Fences",
+      description:
+        "Custom decks and fences to enhance your outdoor space. Trust Chomper's Construction, Sacramento's top contractors, for quality craftsmanship.",
+    },
+    {
+      title: "Kitchens & Cabinets",
+      description:
+        "Beautiful and functional kitchen designs by Chomper's Construction, the leading renovation experts in Sacramento, CA.",
+    },
+    {
+      title: "Bathrooms",
+      description:
+        "Modern and luxurious bathroom remodels by Chomper's Construction. Serving Sacramento homeowners for over 30 years.",
+    },
+    {
+      title: "Flooring",
+      description:
+        "High-quality flooring solutions for every room. Chomper's Construction is Sacramento's trusted contractor for home renovations.",
+    },
+    {
+      title: "Remodeling",
+      description:
+        "Transform your home with our remodeling expertise. Chomper's Construction specializes in home remodels in Sacramento, CA.",
+    },
+    {
+      title: "And Much More!",
+      description:
+        "Let Chomper’s chomp through your renovation list! From decks to kitchens, we’re Sacramento’s go-to contractors for home improvements.",
+    },
+  ]
   return (
     <>
       <Seo
-        title="Chomper's Construction"
-        description="Family-owned construction company with 30 years of experience."
+        title="Home"
+        description="Chomper's Construction is a family-owned construction company in Sacramento, CA, specializing in home remodels, renovations, decks, fences, kitchens, bathrooms, and more. Call us for a free estimate!"
       />
       <div className="min-h-screen bg-chompBlack text-chompWhite">
         {/* Header Section */}
-        <header className="bg-chompBlueDark py-12 text-center">
+        <header className="bg-chompBlack py-12 text-center">
           <div className="container mx-auto px-4">
             <img
               src="/logo_ver001.png"
               alt="Chomper's Construction Logo"
-              className="w-48 mx-auto mb-6"
+              className="w-64 md:w-80 mx-auto mb-6" // Increased logo size
             />
             <h1 className="text-5xl font-bold text-chompYellowLight mb-4">
               Chomper's Construction
             </h1>
-            <p className="text-2xl text-chompWhite">
+            <p
+              className="text-2xl text-chompWhite text-center"
+              style={{ display: "inline" }} /*FIX: to center text*/
+            >
               Chomp it, build it, love it!
             </p>
           </div>
         </header>
 
         {/* Services Section */}
-        <section className="bg-chompBlueLight py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold text-chompYellowLight mb-8">
-              Our Services
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-chompBlueDark p-6 rounded-lg shadow-lg">
-                <h3 className="text-2xl font-bold text-chompYellowLight mb-4">
-                  Decks & Fences
-                </h3>
-                <p className="text-chompWhite">
-                  Custom decks and fences to enhance your outdoor space.
-                </p>
-              </div>
-              <div className="bg-chompBlueDark p-6 rounded-lg shadow-lg">
-                <h3 className="text-2xl font-bold text-chompYellowLight mb-4">
-                  Kitchens & Cabinets
-                </h3>
-                <p className="text-chompWhite">
-                  Beautiful and functional kitchen designs.
-                </p>
-              </div>
-              <div className="bg-chompBlueDark p-6 rounded-lg shadow-lg">
-                <h3 className="text-2xl font-bold text-chompYellowLight mb-4">
-                  Bathrooms
-                </h3>
-                <p className="text-chompWhite">
-                  Modern and luxurious bathroom remodels.
-                </p>
-              </div>
-              <div className="bg-chompBlueDark p-6 rounded-lg shadow-lg">
-                <h3 className="text-2xl font-bold text-chompYellowLight mb-4">
-                  Flooring
-                </h3>
-                <p className="text-chompWhite">
-                  High-quality flooring solutions for every room.
-                </p>
-              </div>
-              <div className="bg-chompBlueDark p-6 rounded-lg shadow-lg">
-                <h3 className="text-2xl font-bold text-chompYellowLight mb-4">
-                  Remodeling
-                </h3>
-                <p className="text-chompWhite">
-                  Transform your home with our remodeling expertise.
-                </p>
-              </div>
-              <div className="bg-chompBlueDark p-6 rounded-lg shadow-lg">
-                <h3 className="text-2xl font-bold text-chompYellowLight mb-4">
-                  And Much More!
-                </h3>
-                <p className="text-chompWhite">
-                  Let Chomper’s chomp through your renovation list!
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Services services={services} />
 
         {/* Hero Section */}
         <Hero
           title="Building Dreams for 30 Years"
           subtitle="Family-owned and operated, we bring quality and care to every project."
-          image1="https://source.unsplash.com/800x600/?construction,house"
-          image2="https://source.unsplash.com/800x600/?building,home"
+          image1="/beforeSample.jpeg"
+          image2="/afterSample.jpeg"
+          phoneNumber="916.425.1825" // Optional: Pass the phone number
         />
 
         {/* Contact Section */}
@@ -103,12 +84,22 @@ const IndexPage: React.FC = () => {
         />
 
         {/* Footer Section */}
-        <footer className="bg-chompBlueDark py-8 text-center">
-          <p className="text-chompWhite">
+        <footer className="bg-chompYellowDark py-8 text-center">
+          <p
+            className="text-chompBlack text-center"
+            style={{ display: "inline" }} /*FIX: to center text*/
+          >
             &copy; {new Date().getFullYear()} Chomper's Construction. All rights
             reserved.
           </p>
-          <p className="text-chompWhite mt-2">LIC#1026504</p>
+          <div>
+            <p
+              className="text-chompBlack mt-2 text-center"
+              style={{ display: "inline-block" }} /*FIX: to center text*/
+            >
+              LIC#1026504
+            </p>
+          </div>
         </footer>
       </div>
     </>

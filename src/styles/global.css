@@ -6,6 +6,12 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+/* Center all p tags */
+p {
+  text-align: center;
+  width: 100%;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
