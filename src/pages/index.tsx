@@ -28,6 +28,65 @@ const IndexPage: React.FC = () => {
           </div>
         </header>
 
+        {/* Services Section */}
+        <section className="bg-chompBlueLight py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-4xl font-bold text-chompYellowLight mb-8">
+              Our Services
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-chompBlueDark p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-chompYellowLight mb-4">
+                  Decks & Fences
+                </h3>
+                <p className="text-chompWhite">
+                  Custom decks and fences to enhance your outdoor space.
+                </p>
+              </div>
+              <div className="bg-chompBlueDark p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-chompYellowLight mb-4">
+                  Kitchens & Cabinets
+                </h3>
+                <p className="text-chompWhite">
+                  Beautiful and functional kitchen designs.
+                </p>
+              </div>
+              <div className="bg-chompBlueDark p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-chompYellowLight mb-4">
+                  Bathrooms
+                </h3>
+                <p className="text-chompWhite">
+                  Modern and luxurious bathroom remodels.
+                </p>
+              </div>
+              <div className="bg-chompBlueDark p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-chompYellowLight mb-4">
+                  Flooring
+                </h3>
+                <p className="text-chompWhite">
+                  High-quality flooring solutions for every room.
+                </p>
+              </div>
+              <div className="bg-chompBlueDark p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-chompYellowLight mb-4">
+                  Remodeling
+                </h3>
+                <p className="text-chompWhite">
+                  Transform your home with our remodeling expertise.
+                </p>
+              </div>
+              <div className="bg-chompBlueDark p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-chompYellowLight mb-4">
+                  And Much More!
+                </h3>
+                <p className="text-chompWhite">
+                  Let Chomper’s chomp through your renovation list!
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Hero Section */}
         <Hero
           title="Building Dreams for 30 Years"
@@ -49,6 +108,7 @@ const IndexPage: React.FC = () => {
             &copy; {new Date().getFullYear()} Chomper's Construction. All rights
             reserved.
           </p>
+          <p className="text-chompWhite mt-2">LIC#1026504</p>
         </footer>
       </div>
     </>

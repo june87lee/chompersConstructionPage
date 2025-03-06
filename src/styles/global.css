@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

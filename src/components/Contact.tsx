@@ -20,6 +20,7 @@ const Contact: React.FC<ContactProps> = ({ title, subtitle, email }) => {
         >
           {email}
         </a>
+        <p className="text-chompWhite mt-4">LIC#1026504</p>
       </div>
     </section>
   )

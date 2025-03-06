@@ -39,5 +39,14 @@ module.exports = {
         icon: `static/logoIcon_ver001.png`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Montserrat\:400,700`, // Montserrat with weights 400 (regular) and 700 (bold)
+        ],
+        display: "swap",
+      },
+    },
   ],
 }
