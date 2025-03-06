@@ -1,4 +1,5 @@
 import * as React from "react"
+import HouseAnimation from "./HouseAnimation"
 
 interface HeroProps {
   title: string
@@ -11,6 +12,7 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, image1, image2 }) => {
   return (
     <section className="bg-chompBlueLight py-20">
       <div className="container mx-auto px-4 text-center">
+        <HouseAnimation />
         <h2 className="text-4xl font-bold text-chompYellowLight mb-6">
           {title}
         </h2>
